@@ -1,6 +1,6 @@
 
-var AttackModCard = require('../../models/attack-modifier/attack-modifier.js');
-var AttackDeck =    require('../../models/attack-modifier/attack-deck.js');
+var AttackModCard = require(__basedir + '/models/attack-modifier/attack-modifier.js');
+var AttackDeck =    require(__basedir + '/models/attack-modifier/attack-deck.js');
 
 var attackCardP2 = new AttackModCard.config();
 attackCardP2.value = 2;
@@ -33,7 +33,7 @@ attackDeck.addCard(new AttackModCard(attackCardMiss));
 attackDeck.addCard(new AttackModCard(attackCardCrit));
 
 attackDeck.addCard(new AttackModCard(attackCardM2), 3);
-attackDeck.addCard(new AttackModCard(attackCardM)1, 2);
+attackDeck.addCard(new AttackModCard(attackCardM1), 2);
 attackDeck.addCard(new AttackModCard(attackCard0), 4);
 attackDeck.addCard(new AttackModCard(attackCardP1), 3);
 attackDeck.addCard(new AttackModCard(attackCardP2), 2);

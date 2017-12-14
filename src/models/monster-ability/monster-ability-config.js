@@ -1,5 +1,5 @@
 
-var Services = require('../../services/Services.js');
+var Services = require(__basedir + '/services/Services.js');
 
 var MonsterAbilityConfig = function MonsterAbilityConfig() {
 	Services.genConfigField(this, 'initiative', 'integer');

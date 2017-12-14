@@ -1,5 +1,5 @@
 
-var Services = require('../../services/Services.js');
+var Services = require(__basedir + '/services/Services.js');
 
 var AttackModifierConfig = function AttackModifierConfig() {
 	Services.genConfigField(this, 'shuffle', 'boolean');
