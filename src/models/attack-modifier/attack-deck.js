@@ -1,6 +1,5 @@
 
 var AttackModifier = require('./attack-modifier.js');
-var AttackModifierConfig = require('./attack-modifier-config.js');
 
 var shuffleDeck = function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex;
@@ -38,7 +37,7 @@ AttackDeck.prototype.addCard = function(cardConfig, count) {
 	if (isNaN(count) || count < 1) {
 		count = 1;
 	}
-	if (!(cardConfig instanceof AttackModifierConfig)) throw "bad config object, must be a AttackModifierConfig";
+	if (!(cardConfig instanceof AttackModifier)) throw "bad config object, must be a AttackModifier";
 
 	this._cardConfig.push([cardConfig, count]);
 };
@@ -47,7 +46,7 @@ AttackDeck.prototype.buildDeck = function() {
 	var deck = [];
 	this._cardConfig.forEach(function(cardConfig) {
 		for (var i=0; i<cardConfig[1]; i++) {
-			deck.push(new AttackModifier(cardConfig[0]));
+			deck.push(cardConfig[0]);
 		}
 	});
 

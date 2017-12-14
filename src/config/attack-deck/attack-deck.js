@@ -29,13 +29,13 @@ attackCardMiss.op = null;
 
 var attackDeck = new AttackDeck();
 
-attackDeck.addCard(attackCardMiss);
-attackDeck.addCard(attackCardCrit);
+attackDeck.addCard(new AttackModCard(attackCardMiss));
+attackDeck.addCard(new AttackModCard(attackCardCrit));
 
-attackDeck.addCard(attackCardM2, 3);
-attackDeck.addCard(attackCardM1, 2);
-attackDeck.addCard(attackCard0, 4);
-attackDeck.addCard(attackCardP1, 3);
-attackDeck.addCard(attackCardP2, 2);
+attackDeck.addCard(new AttackModCard(attackCardM2), 3);
+attackDeck.addCard(new AttackModCard(attackCardM)1, 2);
+attackDeck.addCard(new AttackModCard(attackCard0), 4);
+attackDeck.addCard(new AttackModCard(attackCardP1), 3);
+attackDeck.addCard(new AttackModCard(attackCardP2), 2);
 
 module.exports = attackDeck;
